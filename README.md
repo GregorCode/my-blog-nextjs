@@ -1,1 +1,1 @@
-This is a final template for [Learn Next.js](https://nextjs.org/learn).
+Este es mi blog creado con Nextjs y MarkDown.
