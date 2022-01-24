@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(33, 33, 33);
+  width: 100%;
+  position: fixed;
+  height: 7%;
+  bottom: 0%;
+  z-index: 100;
+}
+
+.iconStyle {
+  width: 1.3rem;
+  margin: 1rem 1rem;
+}
+
+.iconStyle:hover {
+  filter: brightness(60%);
+}
+
+.iconStyle {
+  transition: filter 0.5s;
+}

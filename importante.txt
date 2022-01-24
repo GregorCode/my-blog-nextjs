@@ -1,0 +1,3 @@
+Para colocar link en markdown: [Link a bitcoin](https://es.wikipedia.org/wiki/Bitcoin)
+
+Para colocar link en markdown: ![LN-Form](http://placeimg.com/640/480/any)
