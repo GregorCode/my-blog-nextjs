@@ -14,10 +14,13 @@ export default function Post({ postData }) {
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          Por {postData.author} / <Date dateString={postData.date} />
+        <div className={utilStyles.lightUppercaseText}>
+          <div>Por {postData.author}</div>
+          <div>
+            <Date dateString={postData.date} />
+          </div>
+          <div>Lectura de {readingTime} min</div>
         </div>
-        <p className={utilStyles.lightText}>Lectura de {readingTime} min</p>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>

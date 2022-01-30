@@ -2,12 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
+  font-family: "Euclid Circular A", Arial, Sans-serif;
+  line-height: 1.5;
   font-size: 18px;
-  background-color: rgb(33, 33, 33);
-  color: white;
+  background-color: #efefef;
+  color: #010334;
 }
 
 * {
@@ -15,12 +14,16 @@ body {
 }
 
 a {
-  color: #18ffff;
+  color: #010334;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  text-align: justify;
 }
 
 img {
@@ -31,16 +34,17 @@ img {
 }
 
 blockquote {
-  border-left: 5px solid #18ffff;
+  border-left: 5px solid #010334;
   padding-left: 10px;
+  margin-top: 5%;
 }
 
 code {
   font-family: Consolas, Monaco, Andale Mono, monospace;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 14px;
   display: block;
-  background-color: black;
+  background-color: #1a1818;
   overflow: hidden;
   border-radius: 3px;
   padding: 2px;
