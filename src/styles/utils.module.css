@@ -25,6 +25,10 @@
   line-height: 1.5;
 }
 
+.separation {
+  margin-top: 5%;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }
@@ -40,7 +44,7 @@
 .list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 3% 0 0 0;
 }
 
 .listItem {
@@ -86,4 +90,16 @@
 
 .sloganAbout {
   text-align: right;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputBusqueda {
+  width: 300px;
+  height: 30px;
+  border: 2px solid #717677;
 }
