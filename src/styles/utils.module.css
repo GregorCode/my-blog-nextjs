@@ -37,6 +37,11 @@
   color: inherit;
 }
 
+.colorInherit:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .padding1px {
   padding-top: 1px;
 }
@@ -49,17 +54,15 @@
 
 .listItem {
   margin: 0 0 1.25rem;
-}
-
-.listItem a {
   padding: 0.5rem;
   border-radius: 5px;
   transition: all 0.8s ease;
 }
 
-.listItem a:hover {
+.listItem:hover {
   background: #e1dbd9;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .lightText {

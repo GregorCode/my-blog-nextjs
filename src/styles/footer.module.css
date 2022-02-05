@@ -11,14 +11,11 @@
 }
 
 .iconStyle {
-  width: 1.3rem;
-  margin: 1rem 1rem;
+  margin: 2rem 2rem;
+  transition: filter 0.5s;
 }
 
 .iconStyle:hover {
   filter: brightness(60%);
-}
-
-.iconStyle {
-  transition: filter 0.5s;
+  cursor: pointer;
 }
