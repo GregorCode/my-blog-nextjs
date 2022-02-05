@@ -1,8 +1,10 @@
+@import 'vars';
+
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(33, 33, 33);
+  background-color: $fondo-claro;
   width: 100%;
   position: fixed;
   height: 7%;
@@ -10,12 +12,11 @@
   z-index: 100;
 }
 
-.iconStyle {
-  margin: 2rem 2rem;
-  transition: filter 0.5s;
+.footer a {
+  margin: 0rem 1rem;
 }
 
-.iconStyle:hover {
-  filter: brightness(60%);
-  cursor: pointer;
+.footer a:hover {
+  filter: brightness(300%);
+  transition: filter 0.5s;
 }

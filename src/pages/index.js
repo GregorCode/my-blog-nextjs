@@ -1,10 +1,19 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Layout, { siteTitle } from '@components/layout';
-import utilStyles from '@styles/utils.module.css';
 import { getSortedPostsData } from '@lib/posts';
 import Link from 'next/link';
 import Date from '@components/date';
+import styles from '@styles/pages.module.scss';
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
 
 export default function Home({ allPostsData }) {
   const [posts, setPosts] = useState(allPostsData);
@@ -29,20 +38,20 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.separation}`}>
-        <div className={utilStyles.flexContainer}>
-          <h2 className={utilStyles.headingLg}>Posts</h2>
-          <input className={utilStyles.inputBusqueda} value={busqueda} placeholder="Buscar en este Blog" onChange={handleChange} />
+      <section className={`${styles.headingMd} ${styles.padding1px} ${styles.separation}`}>
+        <div className={styles.flexContainer}>
+          <h2 className={styles.headingLg}>Posts</h2>
+          <input className={styles.inputBusqueda} value={busqueda} placeholder="Buscar en este Blog" onChange={handleChange} />
         </div>
-        <ul className={utilStyles.list}>
+        <ul className={styles.list}>
           {posts &&
             posts.map(({ id, date, title }) => (
-              <li className={utilStyles.listItem} key={id}>
+              <li className={styles.listItem} key={id}>
                 <Link href={`/posts/${id}`} passHref>
-                  <span>{title}</span>
+                  <a>{title}</a>
                 </Link>
                 <br />
-                <small className={utilStyles.lightText}>
+                <small className={styles.lightText}>
                   <Date dateString={date} />
                 </small>
               </li>
@@ -51,13 +60,4 @@ export default function Home({ allPostsData }) {
       </section>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
 }

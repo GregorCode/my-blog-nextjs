@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '@styles/layout.module.css';
-import utilStyles from '@styles/utils.module.css';
 import Link from 'next/link';
 import Footer from '@components/footer';
+import styles from '@styles/layout.module.scss';
 
 const name = '() => { GregorCode }';
 export const siteTitle = `BLOG de Gregorys González`;
@@ -27,19 +26,19 @@ export default function Layout({ children, home }) {
         <header className={styles.header}>
           {home ? (
             <>
-              <Image priority src="/images/profile.jpg" className={utilStyles.borderCircle} height={144} width={144} alt={name} />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              <Image priority src="/images/profile.jpg" className={styles.borderCircle} height={144} width={144} alt={name} />
+              <h1 className={styles.heading2Xl}>{name}</h1>
             </>
           ) : (
             <>
               <Link href="/" passHref>
                 <>
-                  <Image priority src="/images/profile.jpg" className={utilStyles.borderCircle} height={108} width={108} alt={name} />
+                  <Image priority src="/images/profile.jpg" className={styles.borderCircle} height={108} width={108} alt={name} />
                 </>
               </Link>
-              <h2 className={utilStyles.headingLg}>
+              <h2 className={styles.headingLg}>
                 <Link href="/" passHref>
-                  <span className={utilStyles.colorInherit}>{name}</span>
+                  <span className={styles.colorInherit}>{name}</span>
                 </Link>
               </h2>
             </>

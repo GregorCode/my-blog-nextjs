@@ -1,12 +1,14 @@
+@import 'vars';
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Euclid Circular A", Arial, Sans-serif;
+  font-family: $font-family;
   line-height: 1.5;
   font-size: 18px;
-  background-color: #efefef;
-  color: #010334;
+  background-color: $fondo-claro;
+  color: $letra-oscura;
 }
 
 * {
@@ -14,7 +16,7 @@ body {
 }
 
 a {
-  color: #010334;
+  color: $letra-oscura;
   text-decoration: none;
 }
 
@@ -34,7 +36,7 @@ img {
 }
 
 blockquote {
-  border-left: 5px solid #010334;
+  border-left: 5px solid $letra-oscura;
   padding-left: 10px;
   margin-top: 5%;
 }
@@ -44,7 +46,7 @@ code {
   line-height: 1.5;
   font-size: 14px;
   display: block;
-  background-color: #1a1818;
+  background-color: $background-color-code;
   overflow: hidden;
   border-radius: 3px;
   padding: 2px;

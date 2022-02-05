@@ -1,3 +1,5 @@
+@import 'vars';
+
 .container {
   max-width: 46rem;
   padding: 0 1rem;
@@ -21,7 +23,30 @@
 }
 
 .backToHome span:hover {
-  background: #e1dbd9;
+  background: $color-hover;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.heading2Xl {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingLg {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.colorInherit {
+  color: inherit;
   cursor: pointer;
 }
