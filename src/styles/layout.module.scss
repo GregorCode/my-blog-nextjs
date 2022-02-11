@@ -14,22 +14,18 @@
 
 .backToHome {
   margin: 3rem 0 0;
-}
 
-.backToHome span {
-  padding: 0.5rem;
-  border-radius: 5px;
-  transition: all 0.8s ease;
-}
+  & > span {
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.8s ease;
 
-.backToHome span:hover {
-  background: $color-hover;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.borderCircle {
-  border-radius: 9999px;
+    &:hover {
+      background: $color-hover;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 }
 
 .heading2Xl {

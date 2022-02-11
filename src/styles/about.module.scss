@@ -1,0 +1,27 @@
+@import 'vars';
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  font-size: 15px;
+  margin-top: 5%;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.title {
+  color: $letra-clara;
+}
+
+.sloganAbout {
+  text-align: right;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}

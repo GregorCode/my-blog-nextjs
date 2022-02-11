@@ -41,7 +41,7 @@ export default function Post({ postData }) {
     commentScript.setAttribute('crossorigin', 'anonymous');
 
     commentBox && commentBox.current ? commentBox.current.appendChild(commentScript) : console.error(`Error adding utterances comments on: ${commentBox}`);
-  }, [commentBox]);
+  }, []);
 
   return (
     <Layout>

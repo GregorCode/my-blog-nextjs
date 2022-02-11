@@ -1,7 +1,7 @@
 ---
-title: "Habilitar puertos específicos en Firewalld y UFW (Ubuntu)"
-author: "Gregorys González"
-date: "2021-01-22"
+title: 'Habilitar puertos específicos en Firewalld y UFW (Ubuntu)'
+author: 'Gregorys González'
+date: '2022-01-22'
 ---
 
 Tanto Firewalld como UFW son cortafuegos que pueden configurar las iptables las cuales son usadas para implementar reglas de tráfico de redes persistentes.
