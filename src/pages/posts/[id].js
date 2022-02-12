@@ -3,7 +3,7 @@ import Layout from '@components/layout';
 import { getAllPostIds, getPostData } from '@lib/posts';
 import Head from 'next/head';
 import Date from '@components/date';
-import WordCounter from '@components/word-counter';
+import wordCounter from '@components/word-counter';
 import Comment from '@components/comment';
 import setCommentScript from '@components/commentScript';
 import styles from '@styles/pages.module.scss';
@@ -26,10 +26,10 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
-  const readingTime = WordCounter(postData.contentHtml);
+  const readingTime = wordCounter(postData.contentHtml);
   const commentBox = React.createRef();
 
-  // Add comments script with Utterances.
+  // Agrego el script de los comentarios con Utterances.
   useEffect(() => {
     const commentScript = setCommentScript();
     commentBox && commentBox.current ? commentBox.current.appendChild(commentScript) : console.error(`Error adding utterances comments on: ${commentBox}`);
