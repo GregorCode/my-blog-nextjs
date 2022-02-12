@@ -1,15 +1,19 @@
+//import Script from 'next/script';
+import AppContext from '@context/AppContext';
+import useInitialState from '@hooks/useInitialState';
 import '@styles/global.scss';
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  const initialState = useInitialState();
+
+  return (
+    <AppContext.Provider value={initialState}>
+      <Component {...pageProps} />;
+    </AppContext.Provider>
+  );
 }
 
-/* import Header from '@components/Header';
-import Script from 'next/script';
-import AppContext from '@context/AppContext';
-import useInitialState from '@hooks/useInitialState';
-import '../styles/globals.css';
-
+/*
 function MyApp({ Component, pageProps }) {
   const initialState = useInitialState();
   return (
@@ -28,5 +32,4 @@ function MyApp({ Component, pageProps }) {
     </AppContext.Provider>
   );
 }
-
-export default MyApp; */
+*/

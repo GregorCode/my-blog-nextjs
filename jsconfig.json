@@ -4,6 +4,8 @@
     "target": "es6",
     "baseUrl": "src",
     "paths": {
+      "@context/*": ["context/*"],
+      "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"],
       "@pages/*": ["pages/*"],
