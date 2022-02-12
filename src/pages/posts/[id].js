@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Date from '@components/date';
 import WordCounter from '@components/word-counter';
 import Comment from '@components/comment';
+import setCommentScript from '@components/commentScript';
 import styles from '@styles/pages.module.scss';
 
 export async function getStaticPaths() {
@@ -30,16 +31,7 @@ export default function Post({ postData }) {
 
   // Add comments script with Utterances.
   useEffect(() => {
-    const commentScript = document.createElement('script');
-    // const theme = typeof window !== 'undefined' && localStorage.getItem(Theme) === DarkTheme ? 'github-dark' : 'github-light';
-    commentScript.async = true;
-    commentScript.src = 'https://utteranc.es/client.js';
-    commentScript.setAttribute('repo', 'GregorCode/comentarios-del-blog');
-    commentScript.setAttribute('issue-term', 'pathname');
-    commentScript.setAttribute('id', 'utterances');
-    commentScript.setAttribute('theme', 'github-light');
-    commentScript.setAttribute('crossorigin', 'anonymous');
-
+    const commentScript = setCommentScript();
     commentBox && commentBox.current ? commentBox.current.appendChild(commentScript) : console.error(`Error adding utterances comments on: ${commentBox}`);
   }, [commentBox]);
 
