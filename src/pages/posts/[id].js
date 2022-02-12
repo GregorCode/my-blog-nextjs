@@ -1,11 +1,10 @@
-import { createRef, useEffect, useContext } from 'react';
+import { createRef, useEffect } from 'react';
 import Layout from '@components/layout';
 import { getAllPostIds, getPostData } from '@lib/posts';
 import Head from 'next/head';
 import Date from '@components/date';
 import wordCounter from '@components/word-counter';
 import Comment from '@components/comment';
-import AppContext from '@context/AppContext';
 import setCommentScript from '@components/commentScript';
 import styles from '@styles/pages.module.scss';
 
@@ -29,16 +28,12 @@ export async function getStaticProps({ params }) {
 export default function Post({ postData }) {
   const readingTime = wordCounter(postData.contentHtml);
   const commentBox = createRef();
-  const { state, changePageIsOpenFirstTime } = useContext(AppContext);
 
   // Agrego el script de los comentarios con Utterances.
   useEffect(() => {
-    if (state.pageIsOpenFirstTime) {
-      const commentScript = setCommentScript();
-      commentBox && commentBox.current ? commentBox.current.appendChild(commentScript) : console.error(`Error adding utterances comments on: ${commentBox}`);
-      changePageIsOpenFirstTime();
-    }
-  }, [commentBox, state, changePageIsOpenFirstTime]);
+    const commentScript = setCommentScript();
+    commentBox && commentBox.current ? commentBox.current.appendChild(commentScript) : console.error(`Error adding utterances comments on: ${commentBox}`);
+  }, [commentBox]);
 
   return (
     <Layout>
