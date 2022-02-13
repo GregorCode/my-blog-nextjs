@@ -16,6 +16,6 @@ export default withPWA({
  */
 export default {
   env: {
-    commentBlog: 'GregorCode/comentarios-del-blog',
+    COMMENT_BLOG: 'GregorCode/comentarios-del-blog',
   },
 };
