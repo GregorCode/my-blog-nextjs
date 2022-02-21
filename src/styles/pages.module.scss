@@ -75,7 +75,7 @@
   margin-top: 60px;
 }
 
-.inputBusqueda {
+/* .inputBusqueda {
   width: 300px;
   height: 30px;
   background-color: $fondo-claro;
@@ -90,4 +90,29 @@
     outline: none;
     border-bottom: 2px solid $letra-oscura;
   }
-}
+} */
+
+/* .inputBusqueda {
+  background-color: transparent;
+  background-image: linear-gradient(to right, #ff005e 0, #ff7101 70%);
+  background-repeat: no-repeat;
+  background-position: 0 calc(100% + 3px), 0 0;
+  background-size: 100% 3px;
+  box-shadow: none;
+  border: 0;
+  border-bottom: 3px solid #ff005e;
+  color: #000;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+  line-height: 1.5;
+  outline: 0 none;
+  padding: 0.25rem 0;
+  transition: border-color 0.2s linear;
+  width: 300px;
+
+  &:hover,
+  &:focus {
+    border-color: transparent;
+  }
+} */
