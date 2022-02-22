@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <AppContext.Provider value={initialState}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </AppContext.Provider>
   );
 }
